@@ -1,0 +1,9 @@
+FROM python:3.9-alpine
+
+WORKDIR /CA50-2-22 Shvedov I.A.
+
+COPY 1.py .
+COPY index.html .
+COPY 1.java .
+
+CMD sh -c "echo '=== Python Output ===' && python 1.py && echo '' && echo '=== HTML Content ===' && cat index.html"
